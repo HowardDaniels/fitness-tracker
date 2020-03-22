@@ -15,3 +15,22 @@ header{
     font-family: Arial, Helvetica, sans-serif;
     padding: 5px;
 }
+
+table, tr, td{
+    border: 1px solid white;
+    margin: auto;
+    color: white;
+}
+
+#weekdayname{
+    height: 50px;
+    text-align: center;
+}
+
+tr{
+    height: 100px;
+}
+
+td{
+    width: 200px;
+}
