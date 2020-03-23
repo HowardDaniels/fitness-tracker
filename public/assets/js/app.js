@@ -1,0 +1,1 @@
+document.getElementById("calendarSpan").innerText = moment().format('MMMM YYYY');
