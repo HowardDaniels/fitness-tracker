@@ -1,5 +1,6 @@
 document.getElementById("calendarSpan").innerText = moment().format('MMMM YYYY');
 
+let current = moment().format();
 var month = moment().format('MMMM');
 var day = moment().format('DD');
 var year = moment().format('YYYY');
@@ -21,6 +22,7 @@ var subtractDays = day - 1;
 var firstOfMonth = moment().subtract(subtractDays, 'days').calendar();
 var firstOfMonthWeekday = moment(firstOfMonth).format('dddd');
 
+function calendarSetup(){
 if (firstOfMonthWeekday === "Sunday") {
     document.getElementById("a1").textContent = "1";
     document.getElementById("a2").textContent = "2";
@@ -349,6 +351,10 @@ else if (firstOfMonthWeekday === "Saturday") {
     }
 
 }
+};
+
+calendarClear();
+calendarSetup();
 
 var calendarArray = ["a1", "a2", "a3", "a4", "a5", "a6", "a7", 
 "b1", "b2", "b3", "b4", "b5", "b6", "b7", "c1", "c2", "c3", "c4",
@@ -360,3 +366,69 @@ for (i=0; i<calendarArray.length; i++){
         document.getElementById(calendarArray[i]).setAttribute("style", "color: orange;");
     }
 }
+
+function calendarClear() {
+    var calendarArray = ["a1", "a2", "a3", "a4", "a5", "a6", "a7", 
+"b1", "b2", "b3", "b4", "b5", "b6", "b7", "c1", "c2", "c3", "c4",
+"c5", "c6", "c7", "d1", "d2", "d3", "d4", "d5", "d6", "d7", "e1",
+"e2", "e3", "e4", "e5", "e6", "e7", "f1", "f2"];
+    for (i=0; i<calendarArray.length; i++){
+        if (document.getElementById(calendarArray[i]).textContent === day.toString()){
+            document.getElementById(calendarArray[i]).setAttribute("style", "color: white;");
+        }
+        document.getElementById(calendarArray[i]).textContent = "";
+    }
+}
+
+$("#lastYear").on("click", function(){
+current = moment(current).subtract(1, 'years').calendar();
+console.log(current);
+var oneYearAgoDate = moment(current).format('DD');
+subtractDays = oneYearAgoDate - 1;
+firstOfMonth = moment(current).subtract(subtractDays, 'days').calendar();
+firstOfMonthWeekday = moment(firstOfMonth).format('dddd');
+console.log(firstOfMonthWeekday);
+calendarClear();
+calendarSetup();
+document.getElementById("calendarSpan").innerText = moment(current).format('MMMM YYYY');
+});
+
+$("#lastMonth").on("click", function(){
+current = moment(current).subtract(1, 'months').calendar();
+console.log(current);
+var oneMonthAgoDate = moment(current).format('DD');
+subtractDays = oneMonthAgoDate - 1;
+firstOfMonth = moment(current).subtract(subtractDays, 'days').calendar();
+firstOfMonthWeekday = moment(firstOfMonth).format('dddd');
+console.log(firstOfMonthWeekday);
+calendarClear();
+calendarSetup();
+document.getElementById("calendarSpan").innerText = moment(current).format('MMMM YYYY');
+});
+
+$("#nextMonth").on("click", function(){
+current = moment(current).add(1, 'months').calendar();
+console.log(current);
+var oneMonthFromNowDate = moment(current).format('DD');
+subtractDays = oneMonthFromNowDate - 1;
+firstOfMonth = moment(current).subtract(subtractDays, 'days').calendar();
+firstOfMonthWeekday = moment(firstOfMonth).format('dddd');
+console.log(firstOfMonthWeekday);
+calendarClear();
+calendarSetup();
+document.getElementById("calendarSpan").innerText = moment(current).format('MMMM YYYY');
+});
+
+
+$("#nextYear").on("click", function(){
+current = moment(current).add(1, 'years').calendar();
+console.log(current);
+var oneYearFromNowDate = moment(current).format('DD');
+subtractDays = oneYearFromNowDate - 1;
+firstOfMonth = moment(current).subtract(subtractDays, 'days').calendar();
+firstOfMonthWeekday = moment(firstOfMonth).format('dddd');
+console.log(firstOfMonthWeekday);
+calendarClear();
+calendarSetup();
+document.getElementById("calendarSpan").innerText = moment(current).format('MMMM YYYY');
+});
