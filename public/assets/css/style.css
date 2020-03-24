@@ -7,7 +7,7 @@ header{
     padding: 10px;
 }
 
-#calendar{
+.main{
     background-color: purple;
     color: white;
     width: fill;
@@ -43,4 +43,8 @@ td{
 button{
     border: 1px solid orange;
     color: purple;
+}
+
+#month, #day, #year{
+    width: 200px;
 }
