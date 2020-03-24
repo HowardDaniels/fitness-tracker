@@ -39,3 +39,8 @@ td{
    text-align: center;
    margin-bottom: 50px;
 }
+
+button{
+    border: 1px solid orange;
+    color: purple;
+}
