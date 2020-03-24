@@ -1,3 +1,10 @@
+$("#addButton").on("click", function(){
+    document.location.href="add.html";
+})
+$("#statsButton").on("click", function(){
+    document.location.href="stats.html";
+})
+
 document.getElementById("calendarSpan").innerText = moment().format('MMMM YYYY');
 
 let current = moment().format();
