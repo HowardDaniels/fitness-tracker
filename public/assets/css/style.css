@@ -48,3 +48,7 @@ button{
 #month, #day, #year{
     width: 200px;
 }
+
+#distance{
+    height: 30px;
+}

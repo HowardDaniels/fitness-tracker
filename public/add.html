@@ -20,23 +20,24 @@
                 </div>
             </div>
             <br>
+            <form action="/submit" method="post">
             <div class="row">
                 <div class="col-md-2">
             <div class="input-group mb-3" id="month">
                 <div class="input-group-prepend">
-                  <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                  <label class="input-group-text" for="inputGroupSelect01">MM</label>
                 </div>
-                <select class="custom-select" id="inputGroupSelect01">
+                <select class="custom-select" id="inputGroupSelect01" name="MM">
                   <option selected>MM</option>
-                  <option value="1">01</option>
-                  <option value="2">02</option>
-                  <option value="3">03</option>
-                  <option value="4">04</option>
-                  <option value="5">05</option>
-                  <option value="6">06</option>
-                  <option value="7">07</option>
-                  <option value="8">08</option>
-                  <option value="9">09</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
                   <option value="10">10</option>
                   <option value="11">11</option>
                   <option value="12">12</option>
@@ -46,19 +47,19 @@
               <div class="col-md-2">
                 <div class="input-group mb-3" id="day">
                     <div class="input-group-prepend">
-                      <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                      <label class="input-group-text" for="inputGroupSelect02">DD</label>
                     </div>
-                    <select class="custom-select" id="inputGroupSelect01">
+                    <select class="custom-select" id="inputGroupSelect02" name="DD">
                         <option selected>DD</option>
-                        <option value="1">01</option>
-                        <option value="2">02</option>
-                        <option value="3">03</option>
-                        <option value="4">04</option>
-                        <option value="5">05</option>
-                        <option value="6">06</option>
-                        <option value="7">07</option>
-                        <option value="8">08</option>
-                        <option value="9">09</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
                         <option value="10">10</option>
                         <option value="11">11</option>
                         <option value="12">12</option>
@@ -88,59 +89,376 @@
               <div class="col-md-2">
                 <div class="input-group mb-3" id="year">
                     <div class="input-group-prepend">
-                      <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                      <label class="input-group-text" for="inputGroupSelect03">YYYY</label>
                     </div>
-                    <select class="custom-select" id="inputGroupSelect01">
+                    <select class="custom-select" id="inputGroupSelect03" name="YYYY">
                         <option selected>YYYY</option>
-                        <option value="1">2000</option>
-                        <option value="2">2001</option>
-                        <option value="3">2002</option>
-                        <option value="4">2003</option>
-                        <option value="5">2004</option>
-                        <option value="6">2005</option>
-                        <option value="7">2006</option>
-                        <option value="8">2007</option>
-                        <option value="9">2008</option>
-                        <option value="10">2009</option>
-                        <option value="11">2010</option>
-                        <option value="12">2011</option>
-                        <option value="13">2012</option>
-                        <option value="14">2013</option>
-                        <option value="15">2014</option>
-                        <option value="16">2015</option>
-                        <option value="17">2016</option>
-                        <option value="18">2017</option>
-                        <option value="19">2018</option>
-                        <option value="20">2019</option>
-                        <option value="21">2020</option>
-                        <option value="22">2021</option>
-                        <option value="23">2022</option>
-                        <option value="24">2023</option>
-                        <option value="25">2024</option>
-                        <option value="26">2025</option>
-                        <option value="27">2026</option>
-                        <option value="28">2027</option>
-                        <option value="29">2028</option>
-                        <option value="30">2029</option>
-                        <option value="31">2030</option>
+                        <option value="2000">2000</option>
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                        <option value="2008">2008</option>
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
                     </select>
                   </div>
             </div>
 
             </div>
-            <div class="input-group mb-3">
+
+            <div class="row">
+
+              <div class="col-md-2">
+            <div class="input-group mb-3" id="hours">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect04">Hours</label>
+              </div>
+              <select class="custom-select" id="inputGroupSelect04" name="HH">
+                <option selected>HH</option>
+                <option value="00">00</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+              </select>
+            </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="input-group mb-3" id="minutes">
                 <div class="input-group-prepend">
-                  <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                  <label class="input-group-text" for="inputGroupSelect05">Minutes</label>
                 </div>
-                <select class="custom-select" id="inputGroupSelect01">
-                  <option selected>Choose...</option>
-                  <option value="1">Run</option>
-                  <option value="2">Walk</option>
-                  <option value="3">Bike</option>
-                  <option value="4">Swim</option>
-                  <option value="5">Gym workout</option>
+                <select class="custom-select" id="inputGroupSelect05" name="Min">
+                  <option selected>Min</option>
+                  <option value="00">00</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                  <option value="32">32</option>
+                  <option value="33">33</option>
+                  <option value="34">34</option>
+                  <option value="35">35</option>
+                  <option value="36">36</option>
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+                  <option value="39">39</option>
+                  <option value="40">40</option>
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+                  <option value="44">44</option>
+                  <option value="45">45</option>
+                  <option value="46">46</option>
+                  <option value="47">47</option>
+                  <option value="48">48</option>
+                  <option value="49">49</option>
+                  <option value="50">50</option>
+                  <option value="51">51</option>
+                  <option value="52">52</option>
+                  <option value="53">53</option>
+                  <option value="54">54</option>
+                  <option value="55">55</option>
+                  <option value="56">56</option>
+                  <option value="57">57</option>
+                  <option value="58">58</option>
+                  <option value="59">59</option>
                 </select>
               </div>
+            </div>
+          </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect06">Workout types</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect06" name="Type">
+                  <option selected>Choose...</option>
+                  <option value="Run">Run</option>
+                  <option value="Walk">Walk</option>
+                  <option value="Bike">Bike</option>
+                  <option value="Swim">Swim</option>
+                  <option value="Gym workout">Gym workout</option>
+                </select>
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-2">
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect07">Distance Units</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect07" name="DistanceUnits">
+                  <option selected>Units</option>
+                  <option value="mi">mi</option>
+                  <option value="km">km</option>
+                  <option value="m">m</option>
+                </select>
+              </div>
+              </div>
+
+              <div class="col-md-2">
+                  <input id="distance" name="Distance" placeholder="Distance">
+              </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-md-2">
+              <div class="input-group mb-3" id="hours">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect08">Hours</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect08" name="Hours">
+                  <option selected>HH</option>
+                  <option value="00">00</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                </select>
+              </div>
+              </div>
+
+              <div class="col-md-2">
+                <div class="input-group mb-3" id="minutes">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect09">Minutes</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect09" name="Minutes">
+                    <option selected>MM</option>
+                    <option value="00">00</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                    <option value="46">46</option>
+                    <option value="47">47</option>
+                    <option value="48">48</option>
+                    <option value="49">49</option>
+                    <option value="50">50</option>
+                    <option value="51">51</option>
+                    <option value="52">52</option>
+                    <option value="53">53</option>
+                    <option value="54">54</option>
+                    <option value="55">55</option>
+                    <option value="56">56</option>
+                    <option value="57">57</option>
+                    <option value="58">58</option>
+                    <option value="59">59</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <div class="input-group mb-3" id="minutes">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect10">Seconds</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect10" name="Seconds">
+                    <option selected>SS</option>
+                    <option value="00">00</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                    <option value="46">46</option>
+                    <option value="47">47</option>
+                    <option value="48">48</option>
+                    <option value="49">49</option>
+                    <option value="50">50</option>
+                    <option value="51">51</option>
+                    <option value="52">52</option>
+                    <option value="53">53</option>
+                    <option value="54">54</option>
+                    <option value="55">55</option>
+                    <option value="56">56</option>
+                    <option value="57">57</option>
+                    <option value="58">58</option>
+                    <option value="59">59</option>
+                  </select>
+                </div>
+              </div>
+              </div>
+
+              <input type="submit">
+        </form>
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
