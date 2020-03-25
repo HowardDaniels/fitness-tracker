@@ -1,18 +1,18 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  app.get("/api/images", function(req, res) {
-    db.Image.find({}).then(function(dbImages) {
-      res.json(dbImages);
+  app.get("/api/Exercise", function(req, res) {
+    db.Exercise.find({}).then(function(dbExercises) {
+      res.json(dbExercises);
     });
   });
 
-  app.put("/api/images/:id", function(req, res) {
-    db.Image.updateOne(
+  app.put("/api/Exercises/:id", function(req, res) {
+    db.Exercise.updateOne(
       { _id: req.params.id },
       { rating: req.body.rating }
-    ).then(function(dbImage) {
-      res.json(dbImage);
+    ).then(function(dbExercise) {
+      res.json(dbExercise);
     });
   });
 };
