@@ -40,7 +40,7 @@ $("#inputGroupSelect03").on("click", function(){
     }
 });
 
-$("#inputGroupSelect04").on("click", function(){
+$("#inputGroupSelect06").on("click", function(){
     if ($(this).val() !== "Choose..."){
         exerciseType = $(this).val();
         localStorage.setItem("exerciseType", exerciseType);
