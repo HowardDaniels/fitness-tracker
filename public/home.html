@@ -9,15 +9,19 @@
 <body>
 
 <div class="container col-md-4 col-md-offset-4">
-  <form action="/submit" method="post">
+  <form>
     <h2>Create an Exercise</h2>
-    <input type="text" class="form-control" name="date" placeholder="date in MM/DD/YYYY format" autofocus>
-    <input type="text" class="form-control" name="time" placeholder="time in 24-hour format" autofocus>
-    <input type="text" class="form-control" name="type" placeholder="type" autofocus>
-    <input type="text" class="form-control" name="distance" placeholder="distance in miles" autofocus>
-    <input type="text" class="form-control" name="duration" placeholder="duration in hh:mm:ss format" autofocus>
-    <button class="btn btn-lg btn-primary btn-block" id="submit" type="submit">Submit</button>
+    <input type="text" class="form-control" id="date" name="date" placeholder="date in MM/DD/YYYY format" autofocus>
+    <input type="text" class="form-control" id="time" name="time" placeholder="time in 24-hour format" autofocus>
+    <input type="text" class="form-control" id="type" name="type" placeholder="type" autofocus>
+    <input type="text" class="form-control" id="distance" name="distance" placeholder="distance in miles" autofocus>
+    <input type="text" class="form-control" id="duration" name="duration" placeholder="duration in hh:mm:ss format" autofocus>
+    <button class="btn btn-lg btn-primary btn-block" id="newExerciseButton" type="submit">Submit</button>
   </form>
 </div>
+
+<div id="destination"></div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 </html>

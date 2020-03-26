@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/exercisedb", { useNewUrlParser: true });
 
-app.post("/submit", ({ body }, res) => {
+app.post("/NewExercise", ({ body }, res) => {
     Exercise.create(body)
     .then(dbExercise => {
       res.json(dbExercise);

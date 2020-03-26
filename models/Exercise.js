@@ -20,7 +20,7 @@ const ExerciseSchema = new Schema({
   },
 
   duration: {
-      type: Number
+      type: String
   },
 
   ExerciseCreated: {
