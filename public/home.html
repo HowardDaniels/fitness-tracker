@@ -1,101 +1,23 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body>
-        <header>
-            Fitness App
-        </header>
-        <div class="main" id="calendar">
-            <div class="row">
-                <div class="col-md-4">
-                    <button id="addButton">Add +</button>
-                    <br>
-                    <br>
-                    <button id="lastYear"><<</button> <button id="lastMonth"><</button>
-                </div>
-                <div class="col-md-4">
-                <h1>Calendar</h1>
-                <h2 id="calendarSpan"></h2>
-                </div>
-                <div class="col-md-4">
-                    <button id="statsButton">Stats</button>
-                    <br>
-                    <br>
-                    <button id="nextMonth">></button> <button id="nextYear">>></button>
-                </div>
-            </div>
-            <!-- <h2><span>March</span> <span>2020</span></h2> -->
-            <table>
-                <tr id="weekdayname">
-                    <td>Sunday</td>
-                    <td>Monday</td>
-                    <td>Tuesday</td>
-                    <td>Wednesday</td>
-                    <td>Thursday</td>
-                    <td>Friday</td>
-                    <td>Saturday</td>
-                </tr>
-                <tr>
-                    <td><p class="dayNumber" id="a1"></p></td>
-                    <td><p class="dayNumber" id="a2"></p></td>
-                    <td><p class="dayNumber" id="a3"></p></td>
-                    <td><p class="dayNumber" id="a4"></p></td>
-                    <td><p class="dayNumber" id="a5"></p></td>
-                    <td><p class="dayNumber" id="a6"></p></td>
-                    <td><p class="dayNumber" id="a7"></p></td>
-                </tr>
-                <tr>
-                    <td><p class="dayNumber" id="b1"></p></td>
-                    <td><p class="dayNumber" id="b2"></p></td>
-                    <td><p class="dayNumber" id="b3"></p></td>
-                    <td><p class="dayNumber" id="b4"></p></td>
-                    <td><p class="dayNumber" id="b5"></p></td>
-                    <td><p class="dayNumber" id="b6"></p></td>
-                    <td><p class="dayNumber" id="b7"></p></td>
-                </tr>
-                <tr>
-                    <td><p class="dayNumber" id="c1"></p></td>
-                    <td><p class="dayNumber" id="c2"></p></td>
-                    <td><p class="dayNumber" id="c3"></p></td>
-                    <td><p class="dayNumber" id="c4"></p></td>
-                    <td><p class="dayNumber" id="c5"></p></td>
-                    <td><p class="dayNumber" id="c6"></p></td>
-                    <td><p class="dayNumber" id="c7"></p></td>
-                </tr>
-                <tr>
-                    <td><p class="dayNumber" id="d1"></p></td>
-                    <td><p class="dayNumber" id="d2"></p></td>
-                    <td><p class="dayNumber" id="d3"></p></td>
-                    <td><p class="dayNumber" id="d4"></p></td>
-                    <td><p class="dayNumber" id="d5"></p></td>
-                    <td><p class="dayNumber" id="d6"></p></td>
-                    <td><p class="dayNumber" id="d7"></p></td>
-                </tr>
-                <tr>
-                    <td><p class="dayNumber" id="e1"></p></td>
-                    <td><p class="dayNumber" id="e2"></p></td>
-                    <td><p class="dayNumber" id="e3"></p></td>
-                    <td><p class="dayNumber" id="e4"></p></td>
-                    <td><p class="dayNumber" id="e5"></p></td>
-                    <td><p class="dayNumber" id="e6"></p></td>
-                    <td><p class="dayNumber" id="e7"></p></td>
-                </tr>
-                <tr>
-                    <td><p class="dayNumber" id="f1"></p></td>
-                    <td><p class="dayNumber" id="f2"></p></td>
-                    <td><p class="dayNumber" id="f3"></p></td>
-                    <td><p class="dayNumber" id="f4"></p></td>
-                    <td><p class="dayNumber" id="f5"></p></td>
-                    <td><p class="dayNumber" id="f6"></p></td>
-                    <td><p class="dayNumber" id="f7"></p></td>
-                </tr>
-            </table>
-        </div>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport">
+	<title>Mongoose</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="assets/js/moment.min.js"></script>
-        <script src="assets/js/home.js"></script>
-    </body>
+<div class="container col-md-4 col-md-offset-4">
+  <form action="/submit" method="post">
+    <h2>Create an Exercise</h2>
+    <input type="text" class="form-control" name="date" placeholder="date in MM/DD/YYYY format" autofocus>
+    <input type="text" class="form-control" name="time" placeholder="time in 24-hour format" autofocus>
+    <input type="text" class="form-control" name="type" placeholder="type" autofocus>
+    <input type="text" class="form-control" name="distance" placeholder="distance in miles" autofocus>
+    <input type="text" class="form-control" name="duration" placeholder="duration in hh:mm:ss format" autofocus>
+    <button class="btn btn-lg btn-primary btn-block" id="submit" type="submit">Submit</button>
+  </form>
+</div>
+</body>
 </html>
